@@ -8,6 +8,9 @@ COPY . /demo
 
 #RUN apk add --update gcc gfortran musl-dev
 
+RUN apt-get update
+RUN apt-get install ffmpeg libsm6 libxext6  -y
+
 RUN python3 -m venv ./venv
 
 RUN . ./venv/bin/activate
