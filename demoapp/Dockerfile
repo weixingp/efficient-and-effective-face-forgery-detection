@@ -1,8 +1,8 @@
 FROM anibali/pytorch:1.11.0-nocuda-ubuntu20.04
-RUN mkdir /app
-WORKDIR /app
+RUN mkdir /demo
+WORKDIR /demo
 
-COPY . /app
+COPY . /demo
 
 #RUN apk add --update gcc gfortran musl-dev
 
