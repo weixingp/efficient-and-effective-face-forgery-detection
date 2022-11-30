@@ -6,7 +6,7 @@ import mmcv
 import websockets
 from pytube import YouTube
 
-from demoapp.model.model import FaceForgeryDetector, FaceRecognitionCNN
+from model.model import FaceForgeryDetector, FaceRecognitionCNN
 
 
 def download_video(url):
