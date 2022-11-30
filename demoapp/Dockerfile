@@ -1,10 +1,10 @@
-FROM python:3.10.8-alpine3.17
+FROM anibali/pytorch:1.11.0-nocuda-ubuntu20.04
 RUN mkdir /app
 WORKDIR /app
 
 COPY . /app
 
-RUN apk add --update gcc gfortran musl-dev
+#RUN apk add --update gcc gfortran musl-dev
 
 RUN pip install -r requirements.txt
 
