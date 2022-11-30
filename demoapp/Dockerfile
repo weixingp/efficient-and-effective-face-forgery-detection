@@ -4,9 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN apt-get update && \
-    apt-get install --no-install-recommends -y gcc && \
-    apt-get clean && rm -rf /var/lib/apt/lists/*
+RUN apk add --update gcc
 
 RUN pip install -r requirements.txt
 
