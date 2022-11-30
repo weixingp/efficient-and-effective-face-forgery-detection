@@ -1,5 +1,10 @@
 FROM anibali/pytorch:1.11.0-nocuda-ubuntu20.04
-RUN mkdir /demo
+
+RUN mkdir -p /demo
+RUN chown weixing /demo
+USER weixing
+WORKDIR /newfolder
+
 WORKDIR /demo
 
 COPY . /demo
