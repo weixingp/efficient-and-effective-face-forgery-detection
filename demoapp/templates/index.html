@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<!--
+Author: Keenthemes
+Product Name: Metronic - Bootstrap 5 HTML, VueJS, React, Angular. Laravel, Asp.Net Core, Ruby on Rails, Spring Boot, Blazor, Django, Express Node.js & Flask Admin Dashboard Theme
+Purchase: https://1.envato.market/EA4JP
+Website: http://www.keenthemes.com
+Contact: support@keenthemes.com
+Follow: www.twitter.com/keenthemes
+Dribbble: www.dribbble.com/keenthemes
+Like: www.facebook.com/keenthemes
+License: For each use you must have a valid license purchased only from above link in order to legally use the theme for your project.
+-->
+<html lang="en">
+<!--begin::Head-->
+<head><base href=""/>
+	<title>YouTube Face Forgery Detector</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta property="og:locale" content="en_US" />
+	<link rel="shortcut icon" href="{{ url_for('static', filename='media/logos/favicon.ico')}}" />
+	<!--begin::Fonts(mandatory for all pages)-->
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Inter:300,400,500,600,700" />
+	<!--end::Fonts-->
+	<!--begin::Vendor Stylesheets(used for this page only)-->
+	<link href="{{ url_for('static', filename='plugins/custom/fullcalendar/fullcalendar.bundle.css') }}" rel="stylesheet" type="text/css" />
+	<!--end::Vendor Stylesheets-->
+	<!--begin::Global Stylesheets Bundle(mandatory for all pages)-->
+	<link href="{{ url_for('static', filename='plugins/global/plugins.bundle.css')}}" rel="stylesheet" type="text/css" />
+	<link href="{{ url_for('static', filename='css/style.bundle.css')}}" rel="stylesheet" type="text/css" />
+	<!--end::Global Stylesheets Bundle-->
+</head>
+<!--end::Head-->
+<!--begin::Body-->
+<body id="kt_body" class="page-bg">
+<!--begin::Theme mode setup on page load-->
+<script>var defaultThemeMode = "light"; var themeMode; if ( document.documentElement ) { if ( document.documentElement.hasAttribute("data-theme-mode")) { themeMode = document.documentElement.getAttribute("data-theme-mode"); } else { if ( localStorage.getItem("data-theme") !== null ) { themeMode = localStorage.getItem("data-theme"); } else { themeMode = defaultThemeMode; } } if (themeMode === "system") { themeMode = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"; } document.documentElement.setAttribute("data-theme", themeMode); }</script>
+<!--end::Theme mode setup on page load-->
+<!--begin::Main-->
+<!--begin::Root-->
+<div class="d-flex flex-column flex-root">
+	<!--begin::Page-->
+	<div class="page launcher d-flex flex-row flex-column-fluid me-lg-5" id="kt_page">
+		<!--begin::Content-->
+		<div class="d-flex flex-row-fluid">
+			<!--begin::Container-->
+			<div class="d-flex flex-column flex-row-fluid align-items-center">
+				<!--begin::Menu-->
+				<div class="d-flex flex-column flex-column-fluid mb-5 mb-lg-10">
+					<!--begin::Brand-->
+					<div class="d-flex flex-center pt-10 pt-lg-0 mb-10 mb-lg-0 h-lg-175px">
+						<!--begin::Sidebar toggle-->
+						<div class="btn btn-icon btn-active-color-primary w-30px h-30px d-lg-none me-4 ms-n15" id="kt_sidebar_toggle">
+							<!--begin::Svg Icon | path: icons/duotune/abstract/abs015.svg-->
+							<span class="svg-icon svg-icon-1">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<path d="M21 7H3C2.4 7 2 6.6 2 6V4C2 3.4 2.4 3 3 3H21C21.6 3 22 3.4 22 4V6C22 6.6 21.6 7 21 7Z" fill="currentColor" />
+											<path opacity="0.3" d="M21 14H3C2.4 14 2 13.6 2 13V11C2 10.4 2.4 10 3 10H21C21.6 10 22 10.4 22 11V13C22 13.6 21.6 14 21 14ZM22 20V18C22 17.4 21.6 17 21 17H3C2.4 17 2 17.4 2 18V20C2 20.6 2.4 21 3 21H21C21.6 21 22 20.6 22 20Z" fill="currentColor" />
+										</svg>
+									</span>
+							<!--end::Svg Icon-->
+						</div>
+						<!--end::Sidebar toggle-->
+						<!--begin::Logo-->
+						<a href="/">
+							<img alt="Logo" src="{{ url_for('static', filename='media/logos/default-small.svg')}}" class="h-70px" />
+						</a>
+						<!--end::Logo-->
+					</div>
+					<div class="fs-2hx fw-bold text-white text-center mb-13">
+						<span class="me-2">Youtube Face Forgery Detector
+					</div>
+					<!--end::Brand-->
+
+					<div class="row g-7 w-xxl-850px">
+						<!--begin::Search bar-->
+						<form action="#">
+							<!--begin::Card-->
+							<div class="card mb-7 " style="">
+								<!--begin::Card body-->
+								<div class="card-body">
+									<!--begin::Compact form-->
+									<div class="d-flex align-items-center">
+										<!--begin::Input group-->
+										<div class="position-relative w-md-500px me-md-5">
+											<!--begin::Svg Icon | path: icons/duotune/general/gen021.svg-->
+											<span class="svg-icon svg-icon-3 svg-icon-gray-500 position-absolute top-50 translate-middle ms-6">
+															<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+																<rect opacity="0.5" x="17.0365" y="15.1223" width="8.15546" height="2" rx="1" transform="rotate(45 17.0365 15.1223)" fill="currentColor"></rect>
+																<path d="M11 19C6.55556 19 3 15.4444 3 11C3 6.55556 6.55556 3 11 3C15.4444 3 19 6.55556 19 11C19 15.4444 15.4444 19 11 19ZM11 5C7.53333 5 5 7.53333 5 11C5 14.4667 7.53333 17 11 17C14.4667 17 17 14.4667 17 11C17 7.53333 14.4667 5 11 5Z" fill="currentColor"></path>
+															</svg>
+														</span>
+											<!--end::Svg Icon-->
+											<input type="text" class="form-control form-control-solid ps-10" id="search_input" name="search" value="" placeholder="Enter Youtube URL">
+										</div>
+										<!--end::Input group-->
+										<!--begin:Action-->
+										<div class="d-flex align-items-center">
+											<button type="submit" class="btn btn-primary me-5" id="detect_submit">
+												<span class="indicator-label">
+													Detect Forgery!
+												</span>
+												<span class="indicator-progress">
+													Please wait... <span class="spinner-border spinner-border-sm align-middle ms-2"></span>
+												</span>
+											</button>
+										</div>
+										<!--end:Action-->
+									</div>
+									<!--end::Compact form-->
+								</div>
+								<!--end::Card body-->
+							</div>
+							<!--end::Card-->
+						</form>
+						<!--end::Search bar-->
+					</div>
+
+					<!--begin::Row-->
+					<div class="row g-7 w-xxl-850px d-none" id="result_body">
+						<!--begin::Col-->
+						<div class="col-xxl-5">
+							<!--begin::Card-->
+							<div class="card border-0 shadow-none h-lg-100" style="background-color: #A838FF">
+								<!--begin::Card body-->
+								<div class="card-body">
+									<!--begin::Wrapper-->
+									<div class="px-2 mb-10">
+										<!--begin::Heading-->
+										<h3 class="text-white mb-2 fw-bolder ttext-center text-uppercase mb-6">Video Stats</h3>
+										<!--end::Heading-->
+										<!--begin::List-->
+										<div class="mb-7">
+											<!--begin::Item-->
+
+											<div class="d-flex flex-stack">
+												<div class="text-white fw-bolder fs-6" id="stats_title"></div>
+											</div>
+
+											<div class="d-flex flex-stack mt-4">
+												<div class="text-white fw-semibold fs-6 me-2">Duration</div>
+												<span class="text-white fw-bolder fs-6" id="stats_duration">10m53s</span>
+											</div>
+
+											<div class="d-flex flex-stack mt-2">
+												<div class="text-white fw-semibold fs-6 me-2">Video Size</div>
+												<span class="text-white fw-bolder fs-6" id="stats_size">10.7 MB</span>
+											</div>
+
+											<div class="d-flex flex-stack mt-2">
+												<div class="text-white fw-semibold fs-6 me-2">Total Frames</div>
+												<span class="text-white fw-bolder fs-6" id="stats_frames">17000</span>
+											</div>
+
+											<div class="d-flex flex-stack mt-2">
+												<div class="text-white fw-semibold fs-6 me-2">Sampled Frames</div>
+												<span class="text-white fw-bolder fs-6" id="stats_sampled_frames">100</span>
+											</div>
+
+										</div>
+										<!--end::List-->
+										<!--begin::Link-->
+										<a id="stats_raw_url" href="https://google.com" target="_blank" class="btn btn-hover-rise text-white bg-white bg-opacity-10 text-uppercase fs-7 fw-bold">Open raw stream</a>
+										<!--end::Link-->
+									</div>
+									<!--end::Wrapper-->
+									<!--begin::Illustrations-->
+									<img class="mw-100 h-225px mx-auto mb-lg-n18" src="{{ url_for('static', filename='media/illustrations/sigma-1/8.png')}}" />
+									<!--end::Illustrations-->
+								</div>
+								<!--end::Card body-->
+							</div>
+							<!--end::Card-->
+						</div>
+						<!--end::Col-->
+						<!--begin::Col-->
+						<div class="col-xxl-7">
+							<!--begin::Row-->
+							<div class="row g-lg-7">
+								<!--begin::Col-->
+								<div class="col-sm-12">
+									<!--begin::Card-->
+									<div class="card border-0 shadow-none min-h-200px mb-7" id="acc_card" style="background-color: #35D29A">
+										<!--begin::Card body-->
+										<div class="card-body d-flex flex-column justify-content-between text-center">
+											<span></span>
+											<span class="fs-3hx fw-bold text-white me-2 lh-1 ls-n2" id="res_accuracy">76.5%</span>
+											<!--begin::Heading-->
+											<h4 class="text-white fw-bold text-uppercase" id="res_text">Without face forgery</h4>
+											<!--end::Heading-->
+										</div>
+										<!--end::Card body-->
+									</div>
+									<!--end::Card-->
+								</div>
+								<!--end::Col-->
+							</div>
+							<!--end::Row-->
+							<!--begin::Card-->
+							<div class="card border-0 shadow-none min-h-200px" style="background-color: #D5D83D">
+								<div class="ratio ratio-16x9" style="  border-radius: 10px;overflow: hidden;z-index: 1;height: 320px;width: 480px;">
+									<iframe id="yt_video" src="https://www.youtube.com/embed/0gq6BuabNZk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+								</div>
+
+							</div>
+							<!--end::Card-->
+						</div>
+						<!--end::Col-->
+					</div>
+					<!--end::Row-->
+				</div>
+				<!--end::Menu-->
+				<!--begin::Footer-->
+				<div class="d-flex flex-column-auto flex-center">
+					<!--begin::Navs-->
+					<span class="text-muted fw-semibold me-1">Make with ❤ by Wei Xing</span>
+					<ul class="menu fw-semibold order-1">
+						<li class="menu-item">
+							<a href="https://github.com/weixingp/efficient-and-effective-face-forgery-detection" target="_blank" class="menu-link text-white opacity-50 opacity-100-hover px-3">View on Github</a>
+						</li>
+					</ul>
+					<!--end::Navs-->
+				</div>
+				<!--end::Footer-->
+			</div>
+			<!--begin::Content-->
+		</div>
+		<!--begin::Content-->
+	</div>
+	<!--end::Page-->
+</div>
+<!--end::Root-->
+<!--end::Main-->
+
+<!--begin::Scrolltop-->
+<div id="kt_scrolltop" class="scrolltop" data-kt-scrolltop="true">
+	<!--begin::Svg Icon | path: icons/duotune/arrows/arr066.svg-->
+	<span class="svg-icon">
+				<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<rect opacity="0.5" x="13" y="6" width="13" height="2" rx="1" transform="rotate(90 13 6)" fill="currentColor" />
+					<path d="M12.5657 8.56569L16.75 12.75C17.1642 13.1642 17.8358 13.1642 18.25 12.75C18.6642 12.3358 18.6642 11.6642 18.25 11.25L12.7071 5.70711C12.3166 5.31658 11.6834 5.31658 11.2929 5.70711L5.75 11.25C5.33579 11.6642 5.33579 12.3358 5.75 12.75C6.16421 13.1642 6.83579 13.1642 7.25 12.75L11.4343 8.56569C11.7467 8.25327 12.2533 8.25327 12.5657 8.56569Z" fill="currentColor" />
+				</svg>
+			</span>
+	<!--end::Svg Icon-->
+</div>
+<!--end::Scrolltop-->
+<!--begin::Modals-->
+<!--end::Modals-->
+<!--begin::Javascript-->
+<script>var hostUrl = "assets/";</script>
+<!--begin::Global Javascript Bundle(mandatory for all pages)-->
+<script src="{{ url_for('static', filename='plugins/global/plugins.bundle.js')}}"></script>
+<script src="{{ url_for('static', filename='js/scripts.bundle.js')}}"></script>
+<!--end::Global Javascript Bundle-->
+<!--begin::Vendors Javascript(used for this page only)-->
+<!--end::Vendors Javascript-->
+<!--begin::Custom Javascript(used for this page only)-->
+<script src="{{ url_for('static', filename='js/custom/landing.js')}}"></script>
+<!--end::Custom Javascript-->
+<!--end::Javascript-->
+</body>
+<!--end::Body-->
+</html>
