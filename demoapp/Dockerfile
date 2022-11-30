@@ -4,7 +4,7 @@ WORKDIR /app
 
 COPY . /app
 
-RUN apk add --update gcc
+RUN apk add --update gcc gfortran musl-dev
 
 RUN pip install -r requirements.txt
 
