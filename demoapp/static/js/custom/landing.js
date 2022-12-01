@@ -11,7 +11,7 @@ var KTLandingPage = function () {
     }
 
     var startSocket = function (socketPool) {
-        let socket = new WebSocket("ws://localhost:8765");
+        let socket = new WebSocket("ws://fyp.h5.sg/ws");
         let submitBtn = document.querySelector("#detect_submit");
 
         socket.onopen = function(e) {
